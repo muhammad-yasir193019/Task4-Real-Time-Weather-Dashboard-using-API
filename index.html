@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-cloud-sun"></i>Weather-Dashboard</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for a city...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn" title="Use my location"><i class="fa-solid fa-location-dot"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching Weather Data...</p>
+            </div>
+
+            <div id="error-message" class="error hidden">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p id="error-text"></p>
+            </div>
+
+            <div id="weather-cards" class="weather-cards"></div>
+        </main>
+
+        <footer>
+            <p>Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
